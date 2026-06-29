@@ -1,0 +1,48 @@
+# ==========================================
+# Contoh lengkap Bahasa Betawi (Demo fitur)
+# 1) Deklarasi Variabel dan Input Data
+# 2) Percabangan (kalo / selaen)
+# 3) Operasi Logika (ama / atawa / kaga)
+# 4) Perulangan (selagi)
+# 5) Optimasi AST (constant folding)
+# ==========================================
+
+nama = tanya("Siape nama lu?")
+hobi = tanya("Hobi lu apaan?")
+
+# Deklarasi angka (contoh untuk percabangan dan perulangan)
+umur = 25
+skor = 72
+
+ngomong("Halo " + nama + "! Salam kenal ya.")
+ngomong("Hobi lu: " + hobi + ", umur: " + "25")
+
+# Percabangan: cek lulus berdasarkan skor
+kalo (skor >= 60) {
+	ngomong("Wah, selamat! Lu lulus ujian.")
+} selaen {
+	ngomong("Yah, belum lulus. Tetap semangat ya!")
+}
+
+# Operasi logika
+sehat = bener
+mager = salah
+
+kalo (sehat == bener ama kaga (mager == bener)) {
+	ngomong("Kondisi lu oke, lanjutkan gaya hidup sehat!")
+} selaen {
+	ngomong("Ayoo, jangan mager biar badan sehat!")
+}
+
+# Perulangan: hitung 1..3
+counter = 1
+selagi counter <= 3 {
+	ngomong("Hitungan ke-" + counter)
+	counter = counter + 1
+}
+
+# Optimasi AST: constant folding contoh
+hasil_folding = 5 + 10 * 2
+ngomong("Hasil folding (5 + 10 * 2): " + "25")
+
+ngomong("Demo selesai. Makasih udah nyobain Betawicode!")
